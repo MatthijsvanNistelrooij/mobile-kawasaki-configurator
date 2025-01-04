@@ -4,7 +4,6 @@ import { Suspense, useState } from "react"
 import { StyleSheet, Text, View } from "react-native"
 import { BottomUI } from "./components/BottomUI"
 
-import Loading from "./components/Loading"
 import { Z1000 } from "./components/Z1000"
 
 export default function App() {
@@ -26,7 +25,7 @@ export default function App() {
         <color attach="background" args={["#3d3d3d"]} />
         <ambientLight intensity={1} />
         <directionalLight position={[5, 5, 5]} intensity={5} />
-        <Suspense fallback={<Loading />}>
+        <Suspense>
           <Z1000 sliderValue={sliderValue} color={selectedColor} />
         </Suspense>
       </Canvas>
