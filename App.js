@@ -8,7 +8,7 @@ import { Z1000 } from "./components/Z1000"
 
 export default function App() {
   const [sliderValue, setSliderValue] = useState(1.3)
-  const [selectedColor, setSelectedColor] = useState("#D76C6C")
+  const [selectedColor, setSelectedColor] = useState("#8B4000")
 
   const handleSliderValueChange = (value) => {
     setSliderValue(value)

@@ -4,7 +4,7 @@ import Slider from "@react-native-community/slider"
 import { StyleSheet } from "react-native"
 
 export const BottomUI = ({ onSliderValueChange, onColorChange }) => {
-  const colors = ["#D76C6C", "#6CD76C", "#6C6CD7", "#D7D76C", "#D76CD7"]
+  const colors = ["#8B4000", "#6CD76C", "#6C6CD7", "#D7D76C", "#D76CD7"]
   const [sliderValue, setSliderValue] = useState(1.3)
 
   const handleColorChange = (color) => {
@@ -26,7 +26,7 @@ export const BottomUI = ({ onSliderValueChange, onColorChange }) => {
             style={styles.slider}
             minimumValue={1.2}
             maximumValue={4.2}
-            step={0.1}
+            step={0.2}
             value={sliderValue}
             onValueChange={handleSliderChange}
             minimumTrackTintColor="#ffffff"
@@ -54,10 +54,10 @@ export const BottomUI = ({ onSliderValueChange, onColorChange }) => {
 const styles = StyleSheet.create({
   safeArea: {
     backgroundColor: "#7a7a7a",
-    height: 250
+    height: 220,
   },
   sliderContainer: {
-    padding: 40,
+    padding: 50,
     alignItems: "center",
   },
   sliderWrapper: {
@@ -66,8 +66,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   slider: {
-    width: "100%",
-    height: 20,
+    width: 300,
+    opacity: 1,
+    marginTop: 10,
   },
   thumb: {
     width: 20,
@@ -93,7 +94,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     borderWidth: 2,
-    borderColor: "#000000",
+    borderColor: "#3d3d3d",
     margin: 15,
   },
 })
